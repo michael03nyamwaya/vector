@@ -5,7 +5,7 @@ import { ShippingFormInputs, PaymentFormInputs, CartItemType } from "../types"
 import { MoveRight, Trash2 } from "lucide-react"
 import ShippingForm from "../components/ShippingForm"
 import PaymentForm from "../components/PaymentForm"
-import { useState } from "react"
+import { useState, Suspense } from "react"
 import Image from "next/image"
 import useCartStore from "../stores/cartStores"
 
@@ -24,7 +24,25 @@ const steps = [
   },
 ]
 
-function CartPage() {
+// Loading component for Suspense fallback
+function CartLoading() {
+  return (
+    <div className="mx-8 md:mx-10 lg:mx-12 xl:mx-15 mt-10 flex flex-col gap-8 items-center justify-center mb-16">
+      <h1 className="mt-16 text-2xl font-bold text-[#0a5fad]">Your shopping Cart</h1>
+      <div className="w-full flex flex-col md:w-[90%] md:flex-row gap-16 lg:w-[80%] mx-auto">
+        <div className="w-full lg:w-7/12 shadow-lg border-1 border-gray-100 rounded-lg flex flex-col gap-8 p-4">
+          <div className="animate-pulse">Loading cart...</div>
+        </div>
+        <div className="w-full lg:w-5/12 shadow-lg border-1 border-gray-100 rounded-lg flex flex-col gap-8 p-4 h-max">
+          <div className="animate-pulse">Loading details...</div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// Main cart content that uses useSearchParams
+function CartContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const [shippingForm, setShippingForm] = useState<ShippingFormInputs>()
@@ -145,6 +163,15 @@ function CartPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+// Main cart page component with Suspense
+function CartPage() {
+  return (
+    <Suspense fallback={<CartLoading />}>
+      <CartContent />
+    </Suspense>
   )
 }
 
