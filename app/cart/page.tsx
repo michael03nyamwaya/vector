@@ -31,7 +31,6 @@ function CartPage() {
 
   const activestep = parseInt(searchParams.get('step') || '1')
 
-  // ✅ Fixed: Use object destructuring instead of array
   const { cart, removeFromCart } = useCartStore()
 
   // Calculate totals
@@ -52,7 +51,6 @@ function CartPage() {
             <div className={`w-6 h-6 rounded-full flex items-center justify-center text-white ${step.id === activestep ? "bg-gray-800" : "bg-gray-400"}`}>
               {step.id}
             </div>
-            {/* ✅ Fixed: Active step has different text color */}
             <p className={`text-md font-medium ${step.id === activestep ? "text-gray-800" : 'text-gray-400'}`}>
               {step.name}
             </p>
@@ -67,7 +65,6 @@ function CartPage() {
           {activestep === 1 ? (
             cart.length > 0 ? (
               cart.map(item => (
-                /* single cartItem */
                 <div key={item.id} className="flex items-center justify-between">
                   {/* Image & details */}
                   <div className="flex gap-8">
@@ -84,7 +81,6 @@ function CartPage() {
                     </div>
                   </div>
                   {/* delete button */}
-                  {/* ✅ Fixed: Pass item.id instead of item */}
                   <button 
                     onClick={() => removeFromCart(item.id)} 
                     className="h-8 w-8 rounded-full bg-red-100 hover:bg-red-200 transition-all duration-300 text-red-400 flex items-center justify-center cursor-pointer"
@@ -99,7 +95,7 @@ function CartPage() {
           ) : activestep === 2 ? (
             <ShippingForm setShippingForm={setShippingForm}/>
           ) : activestep === 3 && shippingForm ? (
-            <PaymentForm setShippingForm={setShippingForm} /> {/* ✅ FIXED: Added missing prop */}
+            <PaymentForm setShippingForm={setShippingForm} />
           ) : (
             <p className="text-sm text-gray-500">Please fill the shipping form to continue</p>
           )}
@@ -112,26 +108,26 @@ function CartPage() {
             <div className="flex justify-between text-sm">
               <p className="text-gray-500">SubTotal</p>
               <p className="font-semibold">
-                KSH {subtotal.toFixed(2)} {/* ✅ Fixed: Consistent currency */}
+                KSH {subtotal.toFixed(2)}
               </p>
             </div>
             <div className="flex justify-between text-sm">
               <p className="text-gray-500">Discount</p>
               <p className="font-semibold">
-                KSH {discount.toFixed(2)} {/* ✅ Fixed: Consistent currency */}
+                KSH {discount.toFixed(2)}
               </p>
             </div>
             <div className="flex justify-between text-sm">
               <p className="text-gray-500">Shipping fee</p>
               <p className="font-semibold">
-                KSH {shippingFee.toFixed(2)} {/* ✅ Fixed: Consistent currency */}
+                KSH {shippingFee.toFixed(2)}
               </p>
             </div>
             <hr className="border-gray-200"/>
             <div className="flex justify-between">
-              <p className="text-gray-800 font-bold">Total</p> {/* ✅ Fixed: Changed from SubTotal to Total */}
+              <p className="text-gray-800 font-bold">Total</p>
               <p className="font-semibold">
-                KSH {total.toFixed(2)} {/* ✅ Fixed: Use calculated total */}
+                KSH {total.toFixed(2)}
               </p>
             </div>
           </div>
