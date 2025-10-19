@@ -1,7 +1,7 @@
 "use client"
 
 import { useRouter, useSearchParams } from "next/navigation"
-import { cartItemsType, ShippingFormInputs, PaymentFormInputs } from "../types"
+import { CartItemsType, ShippingFormInputs, PaymentFormInputs } from "../types"
 import { MoveRight, Trash2 } from "lucide-react"
 import ShippingForm from "../components/ShippingForm"
 import PaymentForm from "../components/PaymentForm"
