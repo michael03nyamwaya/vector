@@ -183,7 +183,6 @@ export default function FAQSection() {
                   <motion.button 
                     onClick={toggleVideoPlayback}
                     className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center backdrop-blur-sm"
-                    variants={buttonHoverVariants}
                     whileHover="hover"
                     whileTap="tap"
                   >
