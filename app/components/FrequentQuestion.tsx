@@ -34,7 +34,7 @@ const faqItems: FAQItem[] = [
   }
 ];
 
-// Animation variants with fixed easing types
+// Animation variants with simplified easing
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -51,8 +51,8 @@ const itemVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94] // Fixed: cubic-bezier array instead of string
+      duration: 0.6
+      // Removed ease property to use default
     }
   }
 };
@@ -62,16 +62,16 @@ const faqItemVariants = {
     height: 0,
     opacity: 0,
     transition: {
-      duration: 0.3,
-      ease: [0.4, 0, 1, 1] // Fixed: cubic-bezier array
+      duration: 0.3
+      // Removed ease property to use default
     }
   },
   open: {
     height: "auto",
     opacity: 1,
     transition: {
-      duration: 0.4,
-      ease: [0, 0, 0.2, 1] // Fixed: cubic-bezier array
+      duration: 0.4
+      // Removed ease property to use default
     }
   }
 };
@@ -83,8 +83,8 @@ const imageVariants = {
     scale: 1,
     x: 0,
     transition: {
-      duration: 0.8,
-      ease: [0.25, 0.46, 0.45, 0.94] // Fixed: cubic-bezier array
+      duration: 0.8
+      // Removed ease property to use default
     }
   }
 };
@@ -94,8 +94,8 @@ const floatVariants = {
     y: [-10, 10, -10],
     transition: {
       duration: 4,
-      repeat: Infinity,
-      ease: [0.42, 0, 0.58, 1] // Fixed: cubic-bezier array
+      repeat: Infinity
+      // Removed ease property to use default
     }
   }
 };
@@ -252,8 +252,8 @@ export default function FAQSection() {
               }}
               transition={{
                 duration: 3,
-                repeat: Infinity,
-                ease: [0.42, 0, 0.58, 1] // Fixed: cubic-bezier array
+                repeat: Infinity
+                // Removed ease property
               }}
             />
             <motion.div 
@@ -265,8 +265,8 @@ export default function FAQSection() {
               transition={{
                 duration: 4,
                 repeat: Infinity,
-                ease: [0.42, 0, 0.58, 1], // Fixed: cubic-bezier array
                 delay: 1
+                // Removed ease property
               }}
             />
           </motion.div>
@@ -301,8 +301,8 @@ export default function FAQSection() {
                     }}
                     transition={{
                       duration: 5,
-                      repeat: Infinity,
-                      ease: [0.42, 0, 0.58, 1] // Fixed: cubic-bezier array
+                      repeat: Infinity
+                      // Removed ease property
                     }}
                     style={{
                       background: "linear-gradient(90deg, #2563eb, #06b6d4, #2563eb)",
@@ -367,7 +367,7 @@ export default function FAQSection() {
                       <motion.div 
                         className="flex-shrink-0 ml-4"
                         animate={{ rotate: openItem === item.id ? 180 : 0 }}
-                        transition={{ duration: 0.3, ease: [0.42, 0, 0.58, 1] }} // Fixed: cubic-bezier array
+                        transition={{ duration: 0.3 }}
                       >
                         <ChevronDown 
                           size={20} 
