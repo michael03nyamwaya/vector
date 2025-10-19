@@ -14,7 +14,7 @@ const Hero2 = () => {
     }
   };
 
-  // Animation variants
+  // Animation variants - FIXED: Removed easing properties
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -26,30 +26,30 @@ const Hero2 = () => {
     }
   };
 
-  // Text animates from bottom to top
+  // Text animates from bottom to top - FIXED: Removed ease property
   const itemVariants = {
-    hidden: { opacity: 0, y: 50 }, // Start from bottom
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.3,
-        ease: "easeOut"
+        duration: 0.3
+        // Removed: ease: "easeOut"
       }
     }
   };
 
-  // Image animates from top to bottom
+  // Image animates from top to bottom - FIXED: Removed ease property
   const imageVariants = {
-    hidden: { opacity: 0, y: -100, scale: 0.9 }, // Start from top
+    hidden: { opacity: 0, y: -100, scale: 0.9 },
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
         delay: 0.3
+        // Removed: ease: "easeOut"
       }
     }
   };
@@ -58,7 +58,6 @@ const Hero2 = () => {
     <section className='relative py-24 xl:py-0 max-h-screen lg:h-[820px] flex items-center'>
         
       {/* Full Background */}
-     
 
       {/* Background Image Div */}
       <div className='w-full xl:w-3/4 h-full absolute top-0 left-0 z-10 lg:rounded-tr-[500px] overflow-hidden'>
@@ -130,7 +129,7 @@ const Hero2 = () => {
 
       {/* Main Image - Now visible on lg screens and above */}
       <motion.div 
-        className='absolute z-20 right-0 hidden lg:block mt-6' // Changed from xl:block to lg:block
+        className='absolute z-20 right-0 hidden lg:block mt-6'
         variants={imageVariants}
         initial="hidden"
         animate="visible"

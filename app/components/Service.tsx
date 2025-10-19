@@ -104,7 +104,7 @@ const serviceData = [
 const Service = () => {
     const [activeTab, setActiveTab] = useState(serviceData[0].name)
     
-    // Animation variants
+    // Animation variants - REMOVED EASING PROPERTIES
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -121,8 +121,8 @@ const Service = () => {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.5,
-                ease: "easeOut"
+                duration: 0.5
+                // Removed ease property
             }
         }
     }
@@ -133,8 +133,8 @@ const Service = () => {
             opacity: 1,
             scale: 1,
             transition: {
-                duration: 0.6,
-                ease: "easeOut"
+                duration: 0.6
+                // Removed ease property
             }
         }
     }
@@ -158,8 +158,8 @@ const Service = () => {
         active: {
             scale: 1.02,
             transition: { 
-                duration: 0.3,
-                ease: "easeOut"
+                duration: 0.3
+                // Removed ease property
             }
         },
         hover: {
@@ -180,8 +180,8 @@ const Service = () => {
                     }}
                     transition={{
                         duration: 4,
-                        repeat: Infinity,
-                        ease: "easeInOut"
+                        repeat: Infinity
+                        // Removed ease property
                     }}
                 />
                 <motion.div 
@@ -193,8 +193,8 @@ const Service = () => {
                     transition={{
                         duration: 3,
                         repeat: Infinity,
-                        ease: "easeInOut",
                         delay: 1
+                        // Removed ease property
                     }}
                 />
                 <motion.div 
@@ -206,8 +206,8 @@ const Service = () => {
                     transition={{
                         duration: 2.5,
                         repeat: Infinity,
-                        ease: "easeInOut",
                         delay: 0.5
+                        // Removed ease property
                     }}
                 />
             </div>
@@ -389,8 +389,8 @@ const Service = () => {
                                                                         }}
                                                                         transition={{
                                                                             duration: 2,
-                                                                            repeat: Infinity,
-                                                                            ease: "easeInOut"
+                                                                            repeat: Infinity
+                                                                            // Removed ease property
                                                                         }}
                                                                     />
                                                                     What We Offer
