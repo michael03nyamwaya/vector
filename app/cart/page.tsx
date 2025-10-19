@@ -1,7 +1,7 @@
 "use client"
 
 import { useRouter, useSearchParams } from "next/navigation"
-import { CartItemsType, ShippingFormInputs, PaymentFormInputs } from "../types"
+import { ShippingFormInputs, PaymentFormInputs, CartItemType } from "../types"
 import { MoveRight, Trash2 } from "lucide-react"
 import ShippingForm from "../components/ShippingForm"
 import PaymentForm from "../components/PaymentForm"
@@ -34,8 +34,8 @@ function CartPage() {
 
   const { cart, removeFromCart } = useCartStore()
 
-  // Calculate totals
-  const subtotal = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0)
+  // Calculate totals - ✅ FIXED: Added type annotations
+  const subtotal = cart.reduce((acc: number, item: CartItemType) => acc + (item.price * item.quantity), 0)
   const discount = 10
   const shippingFee = 10
   const total = subtotal - discount + shippingFee
