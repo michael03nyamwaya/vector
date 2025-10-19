@@ -14,6 +14,7 @@ const products: ProductsType = [
     description: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     price: 39.9,
     image: '/imgg.png',
+    category: "Clothing" // Added category
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ const products: ProductsType = [
     description: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     price: 59.9,
     image: '/img8.jpg',
+    category: "Clothing" // Added category
   },
   {
     id: 3,
@@ -29,7 +31,8 @@ const products: ProductsType = [
     shortDescription: "Lightweight pullover for casual outings",
     description: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     price: 59.9,
-    image: '/img5.jpg'
+    image: '/img5.jpg',
+    category: "Clothing" // Added category
   },
   {
     id: 4,
@@ -37,7 +40,8 @@ const products: ProductsType = [
     shortDescription: "Moisture-wicking t-shirt for workouts",
     description: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     price: 29.9,
-    image: '/img4.jpg'
+    image: '/img4.jpg',
+    category: "Clothing" // Added category
   },
   {
     id: 5,
@@ -45,7 +49,8 @@ const products: ProductsType = [
     shortDescription: "Fleece jacket with storm technology",
     description: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     price: 49.9,
-    image: '/img6.jpg'
+    image: '/img6.jpg',
+    category: "Clothing" // Added category
   },
   {
     id: 6,
@@ -53,7 +58,8 @@ const products: ProductsType = [
     shortDescription: "Warm hoodie for outdoor activities",
     description: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     price: 49.9,
-    image: '/img9.jpg'
+    image: '/img9.jpg',
+    category: "Clothing" // Added category
   },
   {
     id: 7,
@@ -61,7 +67,8 @@ const products: ProductsType = [
     shortDescription: "Lightweight vest for layered warmth",
     description: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     price: 49.9,
-    image: '/img1.jpg'
+    image: '/img1.jpg',
+    category: "Clothing" // Added category
   },
   {
     id: 8,
@@ -69,7 +76,8 @@ const products: ProductsType = [
     shortDescription: "Comfortable running shoes with air cushioning",
     description: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     price: 59.9,
-    image: '/img2.jpg'
+    image: '/img2.jpg',
+    category: "Footwear" // Added category
   }
 ];
 
