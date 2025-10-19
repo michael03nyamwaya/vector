@@ -15,6 +15,7 @@ async function getProductById(id: string): Promise<ProductType | null> {
       description: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
       price: 39.9,
       image: '/imgg.png',
+      category: "Clothing" // Added category
     },
     {
       id: 2,
@@ -23,6 +24,7 @@ async function getProductById(id: string): Promise<ProductType | null> {
       description: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
       price: 59.9,
       image: '/img8.jpg',
+      category: "Clothing" // Added category
     },
     {
       id: 3,
@@ -30,7 +32,8 @@ async function getProductById(id: string): Promise<ProductType | null> {
       shortDescription: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
       description: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
       price: 59.9,
-      image: '/img5.jpg'
+      image: '/img5.jpg',
+      category: "Clothing" // Added category
     },
     {
       id: 4,
@@ -38,7 +41,8 @@ async function getProductById(id: string): Promise<ProductType | null> {
       shortDescription: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
       description: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
       price: 29.9,
-      image: '/img4.jpg'
+      image: '/img4.jpg',
+      category: "Clothing" // Added category
     },
     {
       id: 5,
@@ -46,7 +50,8 @@ async function getProductById(id: string): Promise<ProductType | null> {
       shortDescription: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
       description: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
       price: 49.9,
-      image: '/img6.jpg'
+      image: '/img6.jpg',
+      category: "Clothing" // Added category
     },
     {
       id: 6,
@@ -54,7 +59,8 @@ async function getProductById(id: string): Promise<ProductType | null> {
       shortDescription: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
       description: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
       price: 49.9,
-      image: '/img9.jpg'
+      image: '/img9.jpg',
+      category: "Clothing" // Added category
     },
     {
       id: 7,
@@ -62,7 +68,8 @@ async function getProductById(id: string): Promise<ProductType | null> {
       shortDescription: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
       description: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
       price: 49.9,
-      image: '/img 1.jpg'
+      image: '/img 1.jpg',
+      category: "Clothing" // Added category
     },
     {
       id: 8,
@@ -70,7 +77,8 @@ async function getProductById(id: string): Promise<ProductType | null> {
       shortDescription: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
       description: "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
       price: 59.9,
-      image: '/img2.jpg'
+      image: '/img2.jpg',
+      category: "Footwear" // Added category
     }
   ];
   
@@ -184,7 +192,7 @@ const ProductPage = async ({
               <div className="flex items-center gap-4 mb-4">
                 <span className="text-sm font-medium text-gray-500">Brand</span>
                 <span className="text-sm text-gray-400">•</span>
-                <span className="text-sm text-gray-500">Category</span>
+                <span className="text-sm text-gray-500">Category: {product.category}</span>
               </div>
 
               {/* Product Name */}
