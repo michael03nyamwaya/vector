@@ -1,9 +1,12 @@
-import {z} from "zod"
+import { z } from "zod"
+
 export interface Service {
   id: number;
   title: string;
   description: string;
   icon: string;
+  serviceList: string[];
+  images: string[];
 }
 
 export interface PortfolioItem {
@@ -19,32 +22,37 @@ export interface Testimonial {
   role: string;
   content: string;
   avatar: string;
-  rating :number
+  rating: number;
 }
-export interface PricingPlan{
-    id: number;
-    name: string;
-    price:string;
-    period:string;
-    features:string[];
-   popular:boolean;
+
+export interface PricingPlan {
+  id: number;
+  name: string;
+  price: string;
+  period: string;
+  features: string[];
+  popular: boolean;
 }
+
 export type ProductType = {
   id: string | number;
   name: string;
   shortDescription: string;
   description: string;
   price: number;
-  image: string
-  
+  image: string;
+  category: string;
 };
+
 export type ProductsType = ProductType[];
 
 export type CartItemType = ProductType & {
-  quantity:number
+  quantity: number;
 }
-export type cartItemsType =CartItemType []
 
+export type CartItemsType = CartItemType[];
+
+// Form Schemas
 export const shippingFormSchema = z.object({
   name: z.string().min(1, "Name is required"),
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
@@ -55,27 +63,72 @@ export const shippingFormSchema = z.object({
     .regex(/^\d+$/, "Phone number must contain only numbers"),
   address: z.string().min(1, "Address is required"),
   city: z.string().min(1, "City is required")
-})
+});
 
-export type ShippingFormInputs = z.infer<typeof shippingFormSchema>
+export type ShippingFormInputs = z.infer<typeof shippingFormSchema>;
 
 export const paymentFormSchema = z.object({
   cardHolder: z.string().min(1, "Card holder is required"),
-  cardNumber: z.string().min(16, "Card number is required").max(16, "Card number must be 16 digits"),
+  cardNumber: z
+    .string()
+    .min(16, "Card number must be 16 digits")
+    .max(16, "Card number must be 16 digits")
+    .regex(/^\d+$/, "Card number must contain only numbers"),
   expirationDate: z
     .string()
     .regex(/^(0[1-9]|1[0-2])\/\d{2}$/, "Expiration date must be in MM/YY format"),
-  cvv: z.string().min(3, "CVV is required").max(3, "CVV must be 3 digits")
-})
+  cvv: z
+    .string()
+    .min(3, "CVV must be 3 digits")
+    .max(3, "CVV must be 3 digits")
+    .regex(/^\d+$/, "CVV must contain only numbers")
+});
 
-export type PaymentFormInputs = z.infer<typeof paymentFormSchema>
+export type PaymentFormInputs = z.infer<typeof paymentFormSchema>;
 
+// Cart Store Types
 export type CartStoreType = {
-  cart: cartItemsType; // ✅ 
+  cart: CartItemsType;
+  addToCart: (product: CartItemType) => void;
+  removeFromCart: (id: string | number) => void;
+  clearCart: () => void;
+  updateQuantity: (id: string | number, quantity: number) => void;
 }
 
-export type CartstoreAtionsType = {
-  addToCart: (product: CartItemType) => void
-  removeFromCart: (id: string | number) => void // ✅ 
-  clearCart: () => void
+// Component Prop Types
+export type ShippingFormProps = {
+  setShippingForm: (data: ShippingFormInputs) => void;
 }
+
+export type PaymentFormProps = {
+  setPaymentForm: (data: PaymentFormInputs) => void;
+}
+
+// API Response Types
+export type ApiResponse<T> = {
+  success: boolean;
+  data?: T;
+  error?: string;
+  message?: string;
+}
+
+export type OrderType = {
+  id: string;
+  items: CartItemsType;
+  shipping: ShippingFormInputs;
+  payment: PaymentFormInputs;
+  total: number;
+  status: 'pending' | 'confirmed' | 'shipped' | 'delivered' | 'cancelled';
+  createdAt: Date;
+}
+
+// Utility Types
+export type PaginationParams = {
+  page: number;
+  limit: number;
+}
+
+export type SearchParams = {
+  query: string;
+  category?: string;
+} & PaginationParams;
