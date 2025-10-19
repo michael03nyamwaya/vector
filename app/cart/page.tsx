@@ -99,7 +99,7 @@ function CartPage() {
           ) : activestep === 2 ? (
             <ShippingForm setShippingForm={setShippingForm}/>
           ) : activestep === 3 && shippingForm ? (
-            <PaymentForm />
+            <PaymentForm setShippingForm={setShippingForm} /> {/* ✅ FIXED: Added missing prop */}
           ) : (
             <p className="text-sm text-gray-500">Please fill the shipping form to continue</p>
           )}
