@@ -7,7 +7,6 @@ import Portfolio from './components/Portfolio';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import Pricing from './components/Pricing';
 import ProductList from './components/ProductList';
 import Banner from './components/Banner';
 import FAQSection from './components/FrequentQuestion';
@@ -38,7 +37,6 @@ const Homepage = async ({ searchParams }: { searchParams: Promise<{ category: st
       {/* <Portfolio/> */}
       <Banner />
       <Testimonials />
-      {/* <Pricing /> */}
       <FAQSection />
       <Contact />
     </>
