@@ -44,7 +44,7 @@ const Topbar = () => {
 
   return (
     <div className={`
-      bg-[#181616] text-white py-3 px-4 text-sm  
+      bg-[#000000] text-white py-3 px-4 text-sm  
       transition-transform duration-300 ease-in-out
       ${isVisible ? 'translate-y-0' : '-translate-y-full'}
     `}>

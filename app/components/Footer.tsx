@@ -1,22 +1,33 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-12">
+    <footer className="bg-[#000000] text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid sm:ml-6 grid-cols-1 md:grid-cols-4 gap-8 ">
           <div>
             <div className="flex items-center mb-4">
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-                <span className="font-bold">PN</span>
-              </div>
-              <span className="ml-2 text-xl font-bold">PrintNow</span>
+              <Link href='/' className="flex items-center group">
+            <div className="relative w-24 lg:w-35 lg:h-12 h-16 xl:w-40 xl:h-12 flex items-center justify-center overflow-hidden transition-transform group-hover:scale-105">
+              <Image 
+                src="/logoo.png" 
+                alt="VectorPrinters Logo" 
+                fill 
+                className='object-contain'
+                priority
+              />
             </div>
-            <p className="text-gray-400">
+          </Link>
+
+            </div>
+            <p className="text-gray-400 text-sm">
               Professional printing services for all your business needs.
             </p>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-semibold mb-4 text-[#FDB71A]">Quick Links</h4>
             <ul className="space-y-2 text-gray-400">
               <li><a href="#home" className="hover:text-white transition">Home</a></li>
               <li><a href="#services" className="hover:text-white transition">Services</a></li>
@@ -26,7 +37,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Services</h4>
+            <h4 className="font-semibold mb-4 text-[#FDB71A]">Services</h4>
             <ul className="space-y-2 text-gray-400">
               <li><a href="#" className="hover:text-white transition">Business Cards</a></li>
               <li><a href="#" className="hover:text-white transition">Brochures</a></li>
@@ -36,7 +47,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Connect</h4>
+            <h4 className="font-semibold mb-4 text-[#FDB71A]">Connect</h4>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition">Facebook</a>
               <a href="#" className="text-gray-400 hover:text-white transition">Instagram</a>

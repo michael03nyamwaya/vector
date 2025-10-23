@@ -3,7 +3,7 @@ import Image from "next/image"
 
 function Banner() {
   return (
-    <section className="relative h-[50vh] min-h-[400px] w-full bg-gradient-to-r from-[#c29826] via-[#f5d313] to-[#e1f762] overflow-hidden">
+    <section className="relative h-[50vh] min-h-[400px] w-full bg-[#FDB71A] overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-black/10"></div>
       <div className="absolute top-0 left-0 w-72 h-72 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>

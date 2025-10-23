@@ -54,17 +54,14 @@ function Sidenav({ isOpen, onClose }: SidenavProps) {
             className="flex items-center"
             onClick={handleLinkClick}
           >
-            <div className="relative w-10 h-10 rounded-full flex items-center justify-center overflow-hidden">
+            <div className="relative w-14 h-10 flex items-center justify-center overflow-hidden">
               <Image 
-                src="/logo.png" 
+                src="/logo (2).png" 
                 alt="VectorPrinters Logo" 
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             </div>
-            <span className="ml-3 text-lg font-bold text-gray-800">
-              VectorPrinters
-            </span>
           </Link>
           
           <button 

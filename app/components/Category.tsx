@@ -11,16 +11,17 @@ const categories = [
     icon: <BookOpen className="w-4 h-4" />,
     slug: "books-prints",
   },
+   {
+    name: "T-shirts & Cloths",
+    icon: <Shirt className="w-4 h-4" />,
+    slug: "tshirts-cloths",
+  },
   {
     name: "Business Cards",
     icon: <IdCard className="w-4 h-4" />,
     slug: "business-cards",
   },
-  {
-    name: "T-shirts & Cloths",
-    icon: <Shirt className="w-4 h-4" />,
-    slug: "tshirts-cloths",
-  },
+ 
   {
     name: "Invitation Cards",
     icon: <CreditCard className="w-4 h-4" />,

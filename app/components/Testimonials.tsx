@@ -8,42 +8,42 @@ import { useEffect, useState } from 'react';
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: 'Sarah Johnson',
+    name: 'David ',
     role: 'Marketing Director',
     content: 'The quality of prints exceeded my expectations! The colors were vibrant and the shipping was incredibly fast. Will definitely order again!',
-    avatar: "/p2.jpeg",
+    avatar: "/m3.jpeg",
     rating: 5,
   },
   {
     id: 2,
-    name: 'Alex Rodriguez',
+    name: 'Alex chege',
     role: 'Small Business Owner',
     content: 'As a small business, finding affordable yet high-quality printing has been a game changer. The on-demand service saved us so much inventory cost!',
-    avatar: "/p3.jpeg",
+    avatar: "/m2.jpeg",
     rating: 4
   },
   {
     id: 3,
-    name: 'Emily Chen',
+    name: 'Emily ',
     role: 'Event Planner',
     content: 'Perfect for our event materials! The team was responsive and the products arrived right on time. Our clients loved the professional touch.',
-    avatar: "/p2.jpg",
+    avatar: "/f2.jpeg",
     rating: 5
   },
   {
     id: 4,
-    name: 'Michael Thompson',
+    name: 'kelvin Nzau',
     role: 'Creative Director',
     content: 'The attention to detail and the quality of the paper used are exceptional. Our brand materials have never looked better!',
-    avatar: "/p4.jpeg",
+    avatar: "/m4.jpeg",
     rating: 5
   },
   {
     id: 5,
-    name: 'Jessica Williams',
+    name: 'Jessica',
     role: 'Founder, Startup Co.',
     content: 'The customer service is top-notch. They helped us with the design and the final product was delivered ahead of schedule. Highly recommended!',
-    avatar: "/p5.jpeg",
+    avatar: "/f1.jpeg",
     rating: 5
   }
 ];

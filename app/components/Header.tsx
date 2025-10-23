@@ -16,18 +16,15 @@ export default function Header() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href='/' className="flex items-center group">
-            <div className="relative w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center overflow-hidden transition-transform group-hover:scale-105">
+            <div className="relative w-24 lg:w-35 lg:h-12 h-16 xl:w-40 xl:h-12 flex items-center justify-center overflow-hidden transition-transform group-hover:scale-105">
               <Image 
-                src="/logo.png" 
+                src="/logo (2).png" 
                 alt="VectorPrinters Logo" 
                 fill 
-                className='object-cover'
+                className='object-contain'
                 priority
               />
             </div>
-            <span className="ml-3 text-2xl font-bold italic bg-gradient-to-r from-[#f3c90c] to-[#1161d8] bg-clip-text text-transparent">
-              VectorPrinters
-            </span>
           </Link>
 
           {/* Desktop Navigation */}

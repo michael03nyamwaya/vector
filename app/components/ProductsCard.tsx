@@ -49,7 +49,7 @@ const Productscard = ({ product }: { product: ProductType }) => {
        
         {/* price and cart */}
         <div className="flex items-center justify-between mt-2">
-          <span className="font-bold text-base text-[#161416]">${product.price.toFixed(2)}</span>
+          <span className="font-bold text-base text-[#161416]">KSH {product.price.toFixed(2)}</span>
           <button 
             onClick={handleAddToCart} 
             className="flex items-center gap-1 bg-[#1d1c1d] text-white px-3 py-2 rounded-lg hover:bg-[#fbf9fc] hover:text-black transition-colors duration-200 font-medium text-xs cursor-pointer"

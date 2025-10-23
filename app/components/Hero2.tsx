@@ -69,7 +69,7 @@ const Hero2 = () => {
           priority
         />
         {/* Overlay for better text readability */}
-        <div className='absolute inset-0 bg-[#f03d3d] mix-blend-multiply'></div>
+        <div className='absolute inset-0 bg-[#861619] mix-blend-multiply'></div>
       </div>
       
       {/* Container */}
@@ -87,7 +87,7 @@ const Hero2 = () => {
               className='text-5xl lg:text-5xl xl:text-6xl font-bold tracking-wide mb-8 text-white'
             >
               <span className='bg-gradient-to-r from-[#3250a8] to-[#3277a8] bg-clip-text text-transparent mix-blend-overlay'>
-               We Don't Just Print <br/> <span className='bg-[#ebc623] bg-clip-text'>We Build Brands</span>
+               We Don't Just Print <br/> <span className='bg-[#FDB71A] bg-clip-text'>We Build Brands</span>
               </span>
             </motion.h1>
             

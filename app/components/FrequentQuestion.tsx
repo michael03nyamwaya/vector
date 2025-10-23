@@ -225,7 +225,7 @@ export default function FAQSection() {
               }}
             >
               <motion.div 
-                className="relative rounded-2xl overflow-hidden shadow-2xl bg-[#d1b514]"
+                className="relative rounded-2xl overflow-hidden shadow-2xl bg-[#FDB71A]"
                 variants={floatVariants}
                 animate="floating"
               >
